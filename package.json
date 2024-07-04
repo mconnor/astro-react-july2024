@@ -7,7 +7,11 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "astro check",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,jsx,astro,md}\"",
+    "fix": "eslint \"src/**/*.{js,jsx,ts,jsx,astro,md}\" --fix",
+    "format": "prettier --write . --plugin=prettier-plugin-astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
@@ -27,5 +31,24 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.5.3"
   },
-  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
+  "engines": {
+    "node": "^20.3.0",
+    "pnpm": ">=9.1.2"
+  },
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a",
+  "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "@types/eslint": "^8.56.10",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-astro": "^1.2.2",
+    "globals": "^15.8.0",
+    "postcss-html": "^1.7.0",
+    "postcss-import": "^16.1.0",
+    "postcss-nesting": "^12.1.5",
+    "prettier": "^3.3.2",
+    "prettier-plugin-astro": "^0.14.0",
+    "typescript-eslint": "^7.15.0"
+  }
 }
